@@ -6,6 +6,6 @@
 
 document.querySelectorAll("a").forEach(element => {
   if (element.href.indexOf("glossary.magento.com") > -1) {
-    element.className = "glossary-term";
+    element.classList.add("glossary-term");
   }
 });
