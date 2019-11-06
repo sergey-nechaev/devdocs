@@ -89,7 +89,7 @@ The following upgrades to core platform components boost platform security and s
 *  Page load speeds have been improved by moving non-critical CSS elements to the bottom of the page. This enables the browser to render and display a storefront page more quickly. This setting is disabled by default, but you can enable it using **Stores** > **Configuration** > **Advanced** > **Developer** > **CSS Settings** > **Use CSS critical path**. For more information, see [CSS critical path documentation]({{ page.baseurl }}/frontend-dev-guide/css-topics/css-critical-path.html).
 
 <!--- MC-16887-->
-*  The `jQuery/ui` library has been refactored into separate widgets so that core modules load only the widgets they need. This update improves the performance of core storefront tasks including the loading of category, configurable product, home, and checkout pages.
+*  The `jQuery/ui` library has been refactored into separate widgets so that core modules load only the widgets they need. This update improves the performance of core storefront tasks including the loading of category, configurable product, home, and checkout pages. Magento recommends that module developers update custom storefront code to remove the `jquery/ui` dependency. Otherwise, a performance degradation warning message might be displayed in the console.
 
 <!--- MC-16046-->
 *  Store pages now display text in readable system fonts while loading custom fonts, which significantly increases page load speed. Merchants who deploy stores that implement large CSS files and many fonts will notice the greatest improvement.
@@ -129,6 +129,8 @@ PWA Studio 4.0.0 contains new hooks in Peregrine. Existing components have also 
 The Google Shopping ads Channel Marketplace extension is now available as a bundled extension. [Google Shopping ads Channel Release Notes](https://devdocs.magento.com/extensions/google-shopping-ads/release-notes/)  describes all changes to this feature for Magento 2.3.x.
 
 ### Magento Shipping
+
+Due to the impending shutdown of Temando (the provider of the technology behind Magento Shipping), it is no longer possible to create a new Magento Shipping account. Support for current Magento Shipping deployments for all existing customers will continue. For detailed status information and recommendations for new shipping implementations in Magento, see our product information page.
 
 This release of Magento Shipping includes:
 
@@ -783,6 +785,10 @@ We've fixed hundreds of issues in the Magento 2.3.3 core code.
 <!--- MC-15163-->
 *  The `oauth` handshake is now followed by a redirect as expected for third-party integrations.
 
+### Magento Shipping
+
+Due to the impending shutdown of Temando (the provider of the technology behind Magento Shipping), it is no longer possible to create a new Magento Shipping account. Support for current Magento Shipping deployments for all existing customers will continue. For detailed status information and recommendations for new shipping implementations in Magento, see our product information page.
+
 ### Newsletter
 
 <!--- MAGETWO-99636-->
@@ -883,7 +889,7 @@ This release includes the following changes to integrations for core payment met
 *  Page load speeds have been improved by moving non-critical CSS elements to the bottom of the page. This enables the browser to render and display a storefront page more quickly. This setting is disabled by default, but you can enable it using **Stores** > **Configuration** > **Advanced** > **Developer** > **CSS Settings** > **Use CSS critical path**. For more information, see [CSS critical path documentation]({{ page.baseurl }}/frontend-dev-guide/css-topics/css-critical-path.html).
 
 <!--- MC-16887-->
-*  The `jQuery/ui` library has been refactored into separate widgets so that core modules load only the widgets they need. This update improves the performance of core storefront tasks including the loading of category, configurable product, home, and checkout pages.
+*  The `jQuery/ui` library has been refactored into separate widgets so that core modules load only the widgets they need. This update improves the performance of core storefront tasks including the loading of category, configurable product, home, and checkout pages. Magento recommends that module developers update custom storefront code to remove the `jquery/ui` dependency. Otherwise, a performance degradation warning message might be displayed in the console.
 
 <!--- MC-16046-->
 *  Store pages now display text in readable system fonts while loading custom fonts, which significantly increases page load speed. Merchants who deploy stores that implement large CSS files and many fonts will notice the greatest improvement.
@@ -1039,7 +1045,7 @@ This release includes the following changes to integrations for core payment met
 ### UI
 
 <!--- MC-16887-->
-*  The `jQuery/ui` library has been refactored into separate widgets so that core modules load only the widgets they need. This update improves the performance of core storefront tasks including the loading of category, configurable product, home, and checkout pages.
+*  The `jQuery/ui` library has been refactored into separate widgets so that core modules load only the widgets they need. This update improves the performance of core storefront tasks including the loading of category, configurable product, home, and checkout pages. Magento recommends that module developers update custom storefront code to remove the `jquery/ui` dependency. Otherwise, a performance degradation warning message might be displayed in the console.
 
 <!--- MC-17922-->
 *  The calendar date picker now updates values as expected when the linked input value is changed.
