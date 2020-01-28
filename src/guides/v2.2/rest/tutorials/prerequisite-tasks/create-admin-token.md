@@ -25,7 +25,7 @@ See [Token-based authentication]({{ page.baseurl }}/get-started/authentication/g
 ```json
 {
 "username": "admin",
-"password": "123123q"
+"password": "somepassword"
 }
 ```
 
