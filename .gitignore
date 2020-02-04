@@ -10,7 +10,7 @@
 /_site/
 
 _config.local.yml
-.jekyll-metadata
+.jekyll-*
 .whatsup.yml
 
 *.bat
