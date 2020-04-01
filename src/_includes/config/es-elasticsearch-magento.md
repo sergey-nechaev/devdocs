@@ -2,7 +2,7 @@ This section discusses the minimum settings you must choose to test Elasticsearc
 For additional details about configuring Elasticsearch, see the [{{site.data.var.ee}} User Guide](http://docs.magento.com/m2/ee/user_guide/catalog/search-elasticsearch.html).
 
 {:.bs-callout-warning}
-Magento 2.3.5 adds support for Elasticsearch 7.x.x and 6.8.x.
+Magento 2.4 supports Elasticsearch 7.x.x and 6.8.x.
 Versions 2.x and 5.x are [End of Life](https://www.elastic.co/support/eol) and are not supported.
 Follow the instructions in [Change the Elasticsearch Client]({{page.baseurl}}/config-guide/elasticsearch/es-downgrade.html).
 

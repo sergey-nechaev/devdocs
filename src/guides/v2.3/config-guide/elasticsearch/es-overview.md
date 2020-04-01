@@ -32,11 +32,11 @@ Using [Elasticsearch][] as your [catalog](https://glossary.magento.com/catalog) 
 
 ### Supported versions {#es-spt-versions}
 
-Magento 2.3.5 adds support for Elasticsearch 7.x.x (default) and 6.8.x.
+Magento 2.4 support for Elasticsearch 7.x.x (default) and 6.8.x.
 Both ES 2.x and 5.x are [End of Life][] and are no longer supported in Magento.
 Follow the instructions in [Change Elasticsearch Client][].
 
-{{site.data.var.ee}} version 2.3.5 supports the following Elasticsearch versions:
+{{site.data.var.ee}} version 2.4 supports the following Elasticsearch versions:
 
 *  Elasticsearch 7.x.x
 *  Elasticsearch 6.8.x
