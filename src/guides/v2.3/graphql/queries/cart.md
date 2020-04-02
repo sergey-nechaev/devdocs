@@ -564,7 +564,7 @@ query {
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`cart_id` | String | A 32-character string that is created when you [create a cart]({{page.baseurl}}/graphql/mutations/create-empty-cart.html)
+`cart_id` | String! | A 32-character string that is created when you [create a cart]({{page.baseurl}}/graphql/mutations/create-empty-cart.html)
 
 ## Output attributes {#cart-output}
 
@@ -622,9 +622,9 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `amount` | Money! | The cost of shipping using this shipping method
 `available` | Boolean! | Indicates whether this shipping method can be applied to the cart
-`base_amount` | Money | The base shipping cost, not including taxes or other cost adjustment. Could be null if method is not available
+`base_amount` | Money | Deprecated.  This attribute is not applicable for GraphQL
 `carrier_code` | String! | A string that identifies a commercial carrier or an offline shipping method
-`carrier_title` | String! | The label for the carrier code
+`carrier_title` | String! | The la This attribute is not applicable for GraphQL. bel for the carrier code
 `error_message` | String | Describes an error condition
 `method_code` | String | A shipping method code associated with a carrier. Could be null if method is not available
 `method_title` | String | The label for the method code. Could be null if method is not available
@@ -653,7 +653,6 @@ Attribute |  Data Type | Description
 `city` | String! | The city specified for the billing address
 `company` | String | The company specified for the billing address
 `country` | [CartAddressCountry!](#CartAddressCountry) | The country code and label for the billing address
-`customer_notes` | String | Comments made to the customer that accompanies the order
 `firstname` | String! | The customer's first name
 `lastname` | String! | The customer's last name
 `postcode` | String | The postal code for the billing address
@@ -677,7 +676,7 @@ The `CartDiscount` object must contain the following attributes.
 Attribute |  Data Type | Description
 --- | --- | ---
 `amount` | Money | The amount of all discounts applied to the cart
-`label` | [String!]! | A concatenated list of strings that describe each applied discount
+`label` | [String]! | A concatenated list of strings that describe each applied discount
 
 ### CartItemInterface {#CartItemInterface}
 
@@ -685,10 +684,10 @@ The `CartItemInterface` can contain the following attributes.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`id` | String | ID of the item
+`id` | String! | ID of the item
 `prices` | [CartItemPrices](#CartItemPrices) | Includes the price of an item, any applied discounts, and calculated totals
-`product` | [ProductInterface]({{ page.baseurl }}/graphql/product/product-interface.html) | Contains attributes that are common to all types of products
-`quantity` | Float | The number of items in the cart
+`product` | [ProductInterface!]({{ page.baseurl }}/graphql/product/product-interface.html) | Contains attributes that are common to all types of products
+`quantity` | Float! | The number of items in the cart
 
 ### CartItemPrices object {#CartItemPrices}
 
@@ -779,6 +778,7 @@ Attribute |  Data Type | Description
 `available_shipping_methods` | [[AvailableShippingMethod]](#AvailableShippingMethod) | An array that lists the shipping methods that can be applied to the cart
 `cart_items` | [[CartItemQuantity]](#CartItemQuantity) | Deprecated. Use `cart_items_v2` instead
 `cart_items_v2` | [CartItemInterface] | An array that lists the items in the cart
+`customer_notes` | String | Comments made to the customer that accompanies the order
 `items_weight` | Float | Deprecated. This attribute is not applicable for GraphQL
 `selected_shipping_method` | [SelectedShippingMethod](#SelectedShippingMethod) | An object that describes the selected shipping method
 
