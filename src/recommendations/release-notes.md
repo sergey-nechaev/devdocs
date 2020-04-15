@@ -9,7 +9,6 @@ The following updates describe the latest improvements to Product Recommendation
 The release notes include:
 
 -  {:.new}New features
-<!---  {:.fix}Fixes and improvements-->
 
 ## 2.0.0
 
@@ -20,4 +19,5 @@ The release notes include:
 To learn more about Product Recommendations:
 
 -  For developers: [Product Recommendations Developer Guide](https://devdocs.magento.com/recommendations/product-recs.html)
+
 -  For end-users: [Product Recommendations User Guide](https://docs.magento.com/m2/ee/user_guide/marketing/product-recommendations.html)
